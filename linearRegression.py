@@ -46,10 +46,10 @@ def find_error(y_pred,actual_y,phase,N):
     sqrError = np.sum(sqr) / N
     print(f"Average error on the {phase} set -> ", sqrError)
     
-train_x = np.array([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20])
-train_y = np.array([1,2,3,2,4,6,7,7,5,6,8,10,9,8,6,6,5,3,2,0])
-test_x = np.array([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20])
-test_y = np.array([0,2,4,5,3,2,1,3,6,7,8,9,10,9,9,10,11,12,11,14])
+train_x = np.array([1,2,3])
+train_y = np.array([3,1,5])
+test_x = np.array([1,2,3])
+test_y = np.array([0,2,4])
 
 N = len(train_x)
 X = np.c_[np.ones(N),train_x]
