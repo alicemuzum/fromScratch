@@ -8,17 +8,24 @@ def euclidian(row1,row2):
         distance += (row1[i]-row2[i])**2
     return m.sqrt(distance)
 
-N = 30
+N = 60
 K = 3
 # Dataset oluşturma
 dataset = []
 for i in range(N):
+    #dataset.append(np.random.randint(N/(i + 2),N,size=2))
     if i < 10:
         dataset.append(np.random.randint(0,5,size=2))
     if i >= 10 and i < 20:
         dataset.append(np.random.randint(5,10,size=2))
     if i >= 20 and i < 30:
         dataset.append(np.random.randint(10,15,size=2))
+    if i >= 30 and i < 40:
+        dataset.append(np.random.randint(15,20,size=2))
+    if i >= 40 and i < 50:
+        dataset.append(np.random.randint(20,25,size=2))
+    if i >= 50 and i < 60:
+        dataset.append(np.random.randint(25,30,size=2))
 
 plt.title("1")
 plt.scatter(*zip(*dataset))
@@ -74,5 +81,5 @@ while True:
     plt.scatter(*zip(*centers), marker="d",c="orange")
     plt.show()
 
-    if titleCount > 10:
+    if titleCount > K*2:
         break
