@@ -14,18 +14,14 @@ K = 3
 dataset = []
 for i in range(N):
     #dataset.append(np.random.randint(N/(i + 2),N,size=2))
-    if i < 10:
-        dataset.append(np.random.randint(0,5,size=2))
-    if i >= 10 and i < 20:
-        dataset.append(np.random.randint(5,10,size=2))
-    if i >= 20 and i < 30:
-        dataset.append(np.random.randint(10,15,size=2))
-    if i >= 30 and i < 40:
-        dataset.append(np.random.randint(15,20,size=2))
-    if i >= 40 and i < 50:
-        dataset.append(np.random.randint(20,25,size=2))
-    if i >= 50 and i < 60:
-        dataset.append(np.random.randint(25,30,size=2))
+    if i < 20:
+        dataset.append(np.random.randint(0,15,size=2))
+   
+    if i >= 20 and i < 40:
+        dataset.append(np.random.randint(20,40,size=2))
+
+    if i >= 40 and i < 60:
+        dataset.append(np.random.randint(45,60,size=2))
 
 plt.title("1")
 plt.scatter(*zip(*dataset))
@@ -33,7 +29,7 @@ plt.scatter(*zip(*dataset))
 # Centerları yazdırma
 centers = []
 for k in range(K):
-    centers.append(np.random.randint(0,15,size=2))
+    centers.append(np.random.randint(0,30,size=2))
 
 plt.scatter(*zip(*centers), marker="d")    
 plt.show()
@@ -65,13 +61,21 @@ while True:
             
         dists.clear()
     
-    newCenter1 = np.array([sum(i for i,j in c1) / len(c1) , sum(j for i,j in c1) / len(c1)])
-    newCenter2 = np.array([sum(i for i,j in c2) / len(c2) , sum(j for i,j in c2) / len(c2)])
-    newCenter3 = np.array([sum(i for i,j in c3) / len(c3) , sum(j for i,j in c3) / len(c3)])
-  
-    centers[0] = newCenter1
-    centers[1] = newCenter2
-    centers[2] = newCenter3
+    newCenters = []
+    newCenters.append(np.array([sum(i for i,j in c1) / len(c1) , sum(j for i,j in c1) / len(c1)]))
+    newCenters.append(np.array([sum(i for i,j in c2) / len(c2) , sum(j for i,j in c2) / len(c2)]))
+    newCenters.append(np.array([sum(i for i,j in c3) / len(c3) , sum(j for i,j in c3) / len(c3)]))
+
+
+# =============================================================================
+#     for old ,newC in enumerate(newCenters):
+#         if m.sqrt((centers[old] - newC)**2) < 1:
+#             break
+# =============================================================================
+    
+    centers[0] = newCenters[0]
+    centers[1] = newCenters[1]
+    centers[2] = newCenters[2]
     
     plt.title(f'{titleCount}')
     titleCount += 1
@@ -81,5 +85,5 @@ while True:
     plt.scatter(*zip(*centers), marker="d",c="orange")
     plt.show()
 
-    if titleCount > K*2:
+    if titleCount > K*2 :
         break

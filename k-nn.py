@@ -13,7 +13,7 @@ def euclidian(row1,row2):
     return m.sqrt(distance)
 
 N = 90
-K = 5
+K = 3
 CLUSTER = 3
 # Dataset oluşturma
 dataset = []
@@ -43,7 +43,7 @@ for i in range(N):
 
 
 
-inp = input("1 for random point\n0 for exit: ")
+inp = 1
 
 while inp != "0":
     inp = input("1 for random point\n0 for exit: ")
@@ -59,8 +59,11 @@ while inp != "0":
         dists = []
         for dot in dataset:
             dists.append([euclidian(dot, random_point),dot[2]])
+            
+        #Sorting dists according to distances
         dists.sort(key=lambda x:x[0])
         
+        #Checking nearest neighbors 
         c = [0,0,0]
         for neighbor in range(K):
             if dists[neighbor][1] == 0:
