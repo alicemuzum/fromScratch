@@ -5,7 +5,7 @@
 | SR No | Project                                                                                                                                           
 |-------|---------------------------------------------------------------------------------------------------------------------------------------------------
 | 1     | [Regression Tree - Kaggle](https://github.com/alicemuzum/fromScratch/tree/main/regression%20tree)                                   
-| 2     | [DigitalClock](https://github.com/larymak/Python-project-Scripts/tree/main/TIME%20SCRIPTS/DigitalClock)                                           
-| 3     | [Insta Spam Bot](https://github.com/larymak/Python-project-Scripts/tree/main/BOTS/InstaSpamBot)                                                 
-| 4     | [Pyjokes](https://github.com/larymak/Python-project-Scripts/tree/main/OTHERS/pyjokes)                                                            
-| 5     | [WhatsApp Spambot](https://github.com/larymak/Python-project-Scripts/tree/main/BOTS/whatsapp-spam)                                                
+| 2     | [beginner data scientist kit](https://github.com/alicemuzum/fromScratch/tree/main/beginner%20data%20scientist%20kit)                                           
+| 3     | [classification algorithms - (knn & k-means)](https://github.com/alicemuzum/fromScratch/tree/main/classification%20algorithms)                                                 
+| 4     | [openCV exercises](https://github.com/alicemuzum/fromScratch/tree/main/openCV)                                                            
+| 5     | [ML-DL script dump](https://github.com/alicemuzum/fromScratch/tree/main/dump)                                                
